@@ -12,5 +12,7 @@ public class Main {
         names.add("yamaguchi");
 
         names.stream().distinct().filter(name -> name.contains("y")).sorted().forEach(name -> System.out.println(name));
+        System.out.println();
+        names.stream().distinct().sorted().forEach(System.out::println);
     }
 }
