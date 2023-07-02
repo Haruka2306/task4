@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -11,6 +12,6 @@ public class Main {
         names.add("ito");
         names.add("yamaguchi");
 
-        names.stream().distinct().filter(name -> name.contains("y")).sorted().forEach(name -> System.out.println(name));
+        names.stream().distinct().map(String::toUpperCase).sorted(Comparator.reverseOrder()).forEach(System.out::println);
     }
 }
