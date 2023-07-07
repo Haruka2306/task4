@@ -12,6 +12,8 @@ public class Main {
         names.add("ito");
         names.add("yamaguchi");
 
+
         names.stream().distinct().map(String::toUpperCase).sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
     }
 }
